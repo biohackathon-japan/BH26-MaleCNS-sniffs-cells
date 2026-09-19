@@ -183,7 +183,7 @@ We encoded the Maynard epithelial cells as in the previous section, with an NMF 
 
 ## The novelty score recovers 89% of the DNA-proven tumour cells and inferCNV recovers all of them
 
-Table 4 gives the outcome. The novelty score separates the DNA-proven tumour cells from the held-out normal epithelium with an AUROC of 0.98 and recalls 89% of them at 95% specificity. inferCNV separates the two groups completely.
+Table 4 and Figure \ref{fig:roc} give the outcome. The novelty score separates the DNA-proven tumour cells from the held-out normal epithelium with an AUROC of 0.98 and recalls 89% of them at 95% specificity. inferCNV separates the two groups completely.
 
 | | AUROC | Precision | Recall |
 |---|---|---|---|
@@ -191,6 +191,11 @@ Table 4 gives the outcome. The novelty score separates the DNA-proven tumour cel
 | inferCNV | 1.000 ± 0.000 | 0.97 | 1.00 ± 0.00 |
 
 Table: Both methods separate DNA-proven tumour cells from held-out normal epithelium. The 102 DNA-proven tumour cells are scored against 42 held-out normal-adjacent epithelial cells. The other 42 normal cells serve as the brain's training set and as inferCNV's reference. Precision and recall are taken at 95% specificity, and all values are mean ± sd over five random splits.
+
+![ROC curves of the novelty score and of inferCNV on the same test. The 102 DNA-proven tumour cells are the
+positives and the 42 held-out normal-adjacent epithelial cells the negatives. Thin lines are the five random
+splits and thick lines their mean. The dotted line marks 95% specificity, where the precision and recall in
+Table 4 are taken. \label{fig:roc}](./maynard_roc.png){ width=70% }
 
 The normal cells come from two biopsies and the tumour cells from other biopsies. Differences between biopsies therefore contribute to the separation obtained by both methods.
 
